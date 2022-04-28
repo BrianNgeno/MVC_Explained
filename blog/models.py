@@ -6,7 +6,6 @@ from django.urls import reverse
 
 
 class Blog(models.Model):
-    tags = models.ManyToManyField(Tags)
     time_created = models.DateField()
     publisher = models.CharField(max_length=100)
     title = models.CharField(max_length=300)
