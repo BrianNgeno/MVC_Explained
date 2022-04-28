@@ -18,3 +18,12 @@ def blog(request):
     except EmptyPage:
         blogs = paginator.page(paginator.num_pages)
     return render(request, 'main/blog.html', locals())
+
+
+
+def singleblog(request, pk,slug):
+
+    blog = Blog.objects.all()
+    single = get_object_or_404(Blog, pk=pk)
+    
+    return render(request, 'main/singleblog.html', {'single': single,'blog':blog})
