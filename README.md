@@ -13,7 +13,7 @@ This is a web application for displaying Blogs that allows users to create, dele
 
 ## Project Design Preview
 + This is the landing page where we will see all our project blogs
-![Project Home page preview](static/images/home.png)
+![Project Home page preview](static/images/Home.png)
 
 + The screenshot shows the page displayed on a single blog click
 ![Project single Blog preview](static/images/single_blog.png)
