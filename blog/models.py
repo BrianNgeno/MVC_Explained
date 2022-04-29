@@ -1,9 +1,9 @@
+from cloudinary.models import CloudinaryField
 from django.db import models
-from django.utils.text import slugify
-# Create your models here.
 from django.urls import reverse
+from django.utils.text import slugify
 
-
+# Create your models here.
 '''the blog Model'''
 class Blog(models.Model):
     time_created = models.DateField()
@@ -11,7 +11,7 @@ class Blog(models.Model):
     title = models.CharField(max_length=300)
     content =  models.TextField()
     slug = models.SlugField(unique=True,max_length=250)
-    image = models.ImageField()
+    image = CloudinaryField('image')
     
     def get_absolute_url(self):
         kwargs = {
