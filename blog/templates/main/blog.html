@@ -6,7 +6,7 @@
 
 <div class="container">
 
-    <div class="row">
+    <div class="row" id="blog">
 
         <!-- dispay the blog items in a loop -->
         {% for data in blogs  %}
@@ -25,11 +25,11 @@
             </a>
 
         </div>
-        {% endfor %}
+        {% endfor %} 
 
-        <!--         
-        blog pargination area -->
     </div>
+
+<!-- blog pargination area -->
     <div class="row" id="pagination">
         <div class="col-md-12 ">
             {% if blogs.has_other_pages %}
