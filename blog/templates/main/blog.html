@@ -19,7 +19,15 @@
 
                         <h5 class="card-title">{{data.title}}</h5>
                         <p class="card-text">{{data.publisher}}.</p>
-                        <a href="{{ data.get_absolute_url }}" class="btn btn-primary">Read More   <i class="fab fa-chevron-circle-right"></i></a>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="{{ data.get_absolute_url }}" class="btn btn-primary">Read More   <i class="fa fa-chevron-circle-right"></i></a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="{{ data.get_absolute_url }}" class="btn btn-danger">Delete   <i class="fa fa-remove"></i></a>
+                            </div>
+                        </div>
+                       
                     </div>
                 </div>
             </a>
