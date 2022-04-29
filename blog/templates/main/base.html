@@ -12,7 +12,22 @@
     <link rel="icon" href="../../../media/Blue.png" />
     <title>Brian's Blog</title>
     {% endif %}
-    {% block meta %} {% endblock %}
+
+    {% block meta %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="blog,articles,technology, tutorials">
+    <meta property="og:site_name" content="Brian Blog" />
+    <meta property="og:description"
+        content="The srticles focused on Privacy and Data Protection, Artificial intelligence, Intellectual Property,  Digital Identity, Internet Governance, Digital Tax and lending, Tech and Democracy. " />
+    <meta property="og:title" content="Brian Blog" />
+    <meta property="og:image" content="{% static 'images/page_banner.jpeg' %}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:updated_time" content="1440432930" />
+    <meta name="author" content="Brian">
+    {% endblock %}
 
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="#">

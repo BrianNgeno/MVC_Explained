@@ -4,7 +4,7 @@ from django.utils.text import slugify
 from django.urls import reverse
 
 
-
+'''the blog Model'''
 class Blog(models.Model):
     time_created = models.DateField()
     publisher = models.CharField(max_length=100)
@@ -25,3 +25,5 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+
+    

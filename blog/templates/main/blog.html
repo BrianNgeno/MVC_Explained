@@ -1,41 +1,35 @@
 {% extends 'main/base.html' %}
 {% load staticfiles %}
-{% block meta %}
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- Tell the browser to be responsive to screen width -->
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="keywords" content="blog,articles,technology, tutorials">
-<meta property="og:site_name" content="LawyersHub" />
-<meta property="og:description"
-    content="The srticles focused on Privacy and Data Protection, Artificial intelligence, Intellectual Property,  Digital Identity, Internet Governance, Digital Tax and lending, Tech and Democracy. " />
-<meta property="og:title" content="Brian Blog" />
-<meta property="og:image" content="{% static 'images/page_banner.jpeg' %}" />
-<meta property="og:type" content="website" />
-<meta property="og:updated_time" content="1440432930" />
-<meta name="author" content="Brian">
-{% endblock %}
+
 {% block content %}
 
-<div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <img src="{% static 'images/image1.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="col-sm-6">
+            <div class="card">
+                <img src="{% static 'images/image2.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body"> 
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+
+</div>
 
 {% endblock %}
