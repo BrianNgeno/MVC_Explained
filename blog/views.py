@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 import requests
 from .models import Blog
 from django.http.response import HttpResponseRedirect

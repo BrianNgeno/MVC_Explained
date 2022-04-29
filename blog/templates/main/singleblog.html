@@ -1,0 +1,110 @@
+{% extends 'main/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+
+<div class="container-fluid">
+    <div class="spacer">
+        <div class="container">
+            <!-- Row  -->
+            <div class="row justify-content-center">
+
+                <div class="col-md-8">
+                    <div class="row">
+                        <!-- Blog  -->
+                        <div class="col-md-12 container">
+                            <div class="mini-spacer">
+                                <img src="{{single.image.url}}" alt="{{single.title}}" class="img-fluid" />
+                                <ul class="text-uppercase m-t-40 list-inline font-13 font-medium">
+                                    <li><a href="{{single.get_absolute_url}}">{{single.publisher}}</a></li>
+                                    <li><a href="{{single.get_absolute_url}}">{{single.time_created}}</a></li>
+                                    <li><a href="{{single.get_absolute_url}}" class="text-info">{{single.title}}</a>
+                                    </li>
+                                </ul>
+                                <p> {{ single.content|safe }} </p>
+
+                            </div>
+                            <!-- Blog  -->
+
+
+                        </div>
+                        <div class="col-md-12">
+                            <hr>
+                        </div>
+                        <div class="col-md-12">
+      
+
+                        </div>
+
+
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-4 mini-spacer">
+                    <div style="margin-bottom: 5%; ">
+
+                        <h5 class="card-header">{{single.publisher}}</h5>
+
+                        <div class="card-body">
+                            {{single.title}}<br>
+                            <a href="{{ single.get_absolute_url }}#disqus_thread" class="ml-auto link"><i
+                                    class="icon-Speach-Bubble8 font-20 vm"></i></a>
+                        </div>
+
+                        <div class="card-body">
+                          
+                        </div>
+                    </div>
+                    <div class="row">
+                        {% for data in blog|slice:":5" %}
+                        <div class="container card" style="margin-bottom: 5%;">
+                            <div class="card-content">
+                                <div class="card-desc">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="{{data.image.url}}" alt="blogimg" height="50px" width="50px">
+                                        </div>
+                                        <div class="col-md-10">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h6>{{data.title}}</h6>
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    <a href="{{ data.get_absolute_url }}#disqus_thread"
+                                                        class="ml-auto link"><i
+                                                            class="icon-Speach-Bubble8 font-20 vm"></i></a>
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    <h6>{{data.time_created}}</h6>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <a href="{{ data.get_absolute_url }}" class="btn-card">Read</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <hr>
+                                    </div>
+
+
+                                    <br>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Row  -->
+    </div>
+</div>
+
+{% endblock %}
