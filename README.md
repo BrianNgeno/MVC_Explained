@@ -8,11 +8,16 @@ This is a web application for displaying Blogs that allows users to create, dele
 + User should see uploaded blogs in the site.
 + User should be able to delete blogs.
 + User should be able to update the exisiting blogs.
++ User should be able to add comments and reactions to the existing blogs.
 ```
 
 ## Project Design Preview
++ This is the landing page where we will see all our project blogs
+![Project Home page preview](static/images/home.png)
 
-![Project design preview](static/images/image1.jpg)
++ The screenshot shows the page displayed on a single blog click
+![Project single Blog preview](static/images/single_blog.png)
+
 
 ## Author
 
