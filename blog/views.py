@@ -13,7 +13,7 @@ def blog(request):
     blog = Blog.objects.all()
     page = request.GET.get('page', 1)
 
-    paginator = Paginator(blog, 9)
+    paginator = Paginator(blog, 2)
     try:
         blogs = paginator.page(page)
     except PageNotAnInteger:
