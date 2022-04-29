@@ -12,7 +12,7 @@
 
             <a href="{{ data.get_absolute_url }}" id="blogimg">
                 <div class="card">
-                    <img src="{{data.image.url}}" class="card-img-top" alt="{{data.title}}">
+                    <img src="{{ MEDIA_URL }}{{data.image.url}}" class="card-img-top" alt="{{data.title}}">
                     <div class="card-body">
 
                         <h5 class="card-title">{{data.title}}</h5>
