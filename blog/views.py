@@ -1,9 +1,13 @@
-from django.shortcuts import render, redirect, get_object_or_404
 import requests
-from .models import Blog
-from django.http.response import HttpResponseRedirect
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+from django.http.response import HttpResponseRedirect
+from django.shortcuts import get_object_or_404, redirect, render
+from django.views.generic import CreateView, View
+
+from .forms import BlogForm
+from .models import Blog
+
 
 # Create your views here.
 def index(request):
@@ -32,7 +36,15 @@ def singleblog(request, pk,slug):
     
     return render(request, 'main/singleblog.html', {'single': single,'blog':blog})
 
-
+class BlogCreateView( CreateView):
+    template_name = 'main/upload.html'
+    form_class = BlogForm
+    success_url = '/blog/'
+ 
+    def form_valid(self, form):
+        p = form.save()
+           
+        return super().form_valid(form)
 
 def delete_blog(request, blog_id):
     blog_item = Blog.objects.get(id=blog_id)

@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8 card" id="card">
+            <form action="" method="POST" enctype="multipart/form-data" id="form">
+                {% csrf_token %}
+                {{ form.as_p|safe }}
+                <button class="btn btn-outline-info">Submit Data</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

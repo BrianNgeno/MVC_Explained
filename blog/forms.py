@@ -28,7 +28,7 @@ class BlogForm(forms.ModelForm):
             }),         
             "slug": forms.TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'please enter your blog url'
+                'placeholder': 'Enter a valid blog url with only letters, hyphens and underscores'
             }),
             
         }
