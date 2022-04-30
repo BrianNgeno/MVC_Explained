@@ -41,9 +41,9 @@ class BlogCreateView( CreateView):
     form_class = BlogForm
     success_url = '/blog/'
  
-    def form_valid(self, form):
+    def form_valid(self, form,request):
         p = form.save()
-           
+        messages.success(request, 'Blog uploaded successfully')
         return super().form_valid(form)
 
 def delete_blog(request, blog_id):
