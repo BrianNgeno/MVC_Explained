@@ -28,4 +28,7 @@ class Blog(models.Model):
 
     def save_blog(self):
         self.save()
+
+    def delete_blog(self):
+        self.delete()
     
