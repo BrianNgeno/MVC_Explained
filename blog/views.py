@@ -3,6 +3,7 @@ import requests
 from .models import Blog
 from django.http.response import HttpResponseRedirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib import messages
 
 # Create your views here.
 def index(request):
