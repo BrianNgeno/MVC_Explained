@@ -32,3 +32,7 @@ class Blog(models.Model):
     def delete_blog(self):
         self.delete()
     
+    @classmethod
+    def search_blog(cls, title):
+        blog = Blog.objects.filter(blog__title__icontains = title)
+        return blog
