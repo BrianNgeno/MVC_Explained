@@ -6,7 +6,7 @@ from django.utils.text import slugify
 # Create your models here.
 '''the blog Model'''
 class Blog(models.Model):
-    time_created = models.DateField()
+    time_created = models.DateField(auto_now=True)
     publisher = models.CharField(max_length=100)
     title = models.CharField(max_length=300)
     content =  models.TextField()
