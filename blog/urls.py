@@ -7,6 +7,7 @@ urlpatterns = [
     # path('', views.index, name='landing'), 
     path('',views.blog,name='blog'),
     path('blog/<slug:slug>_<int:pk>',views.singleblog,name='singleblog'),
+    path('blog/delete/<int:blog_id>/', views.delete_blog, name='delete_blog'),
 ]
 
 if settings.DEBUG:

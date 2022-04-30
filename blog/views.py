@@ -37,4 +37,4 @@ def delete_blog(request, blog_id):
     blog_item = Blog.objects.get(id=blog_id)
     Blog.delete_blog(blog_item)
     messages.warning(request, 'Blog item deleted successfully')
-    return redirect('')
+    return redirect('blog')
