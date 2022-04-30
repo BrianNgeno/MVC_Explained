@@ -4,8 +4,8 @@
 {% block content %}
 
 
-<div class="container">
 
+<div class="container">
     <div class="row">
         {% if messages %} {% for message in messages %}
         <div class="col-md-12 alert alert-{{ message.tags }} message" align="center"
@@ -15,8 +15,9 @@
         {% endfor %}
         {% endif %}
     </div>
+</div>
 
-
+<div class="container">
     <div class="row" id="blog">
 
         <!-- dispay the blog items in a loop -->
