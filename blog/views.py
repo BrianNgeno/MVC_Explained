@@ -39,7 +39,7 @@ def singleblog(request, pk,slug):
 class BlogCreateView( CreateView):
     template_name = 'main/upload.html'
     form_class = BlogForm
-    success_url = '/blog/'
+    success_url = '/'
 
  
     def form_valid(self, form):
