@@ -30,3 +30,11 @@ def singleblog(request, pk,slug):
     single = get_object_or_404(Blog, pk=pk)
     
     return render(request, 'main/singleblog.html', {'single': single,'blog':blog})
+
+
+
+def delete_blog(request, blog_id):
+    blog_item = Blog.objects.get(id=blog_id)
+    Blog.delete_blog(blog_item)
+    messages.warning(request, 'Blog item deleted successfully')
+    return redirect('')
