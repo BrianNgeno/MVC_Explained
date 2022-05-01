@@ -34,5 +34,5 @@ class Blog(models.Model):
     
     @classmethod
     def search_blog(cls, title):
-        blog = Blog.objects.filter(blog__title__icontains = title)
+        blog = Blog.objects.filter(title__icontains = title)
         return blog

@@ -51,3 +51,14 @@ def delete_blog(request, blog_id):
     Blog.delete_blog(blog_item)
     messages.warning(request, 'Blog item deleted successfully')
     return redirect('blog')
+
+def search(request):
+    if 'search' in request.GET and request.GET['search']:
+        search_term = request.GET.get('search')
+        searched = Blog.search_blog(search_term)
+        message = f'{search_term}'
+
+        return render(request, 'main/search.html',{'message':message, 'searched':searched})
+    else:
+        message = 'Enter an exisiting blog title'
+        return render(request, 'main/search.html', {'message':message})
