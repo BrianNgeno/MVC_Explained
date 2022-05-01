@@ -36,3 +36,6 @@ class Blog(models.Model):
     def search_blog(cls, title):
         blog = Blog.objects.filter(title__icontains = title)
         return blog
+
+    def update_blog(self, *args, **kwargs):
+        return type(self).objects.filter(pk=self.pk).update(*args, **kwargs)

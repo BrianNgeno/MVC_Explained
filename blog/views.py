@@ -62,3 +62,11 @@ def search(request):
     else:
         message = 'Enter an exisiting blog title'
         return render(request, 'main/search.html', {'message':message})
+
+
+def singleblog(request, pk,slug):
+
+    blog = Blog.objects.all()
+    single = get_object_or_404(Blog, pk=pk)
+    
+    return render(request, 'main/singleblog.html', {'single': single,'blog':blog})
